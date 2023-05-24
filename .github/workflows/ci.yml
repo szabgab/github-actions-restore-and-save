@@ -16,8 +16,7 @@ jobs:
         id: restore
         with:
           path: data/
-          key: abc
-          # ${{ github.ref }}
+          key: ${{ github.ref }}
           #fail-on-cache-miss: False
 
 
