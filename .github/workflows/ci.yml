@@ -20,7 +20,7 @@ jobs:
           #fail-on-cache-miss: False
 
 
-      - name: Shell - View environment
+      - name: Pretend to add more data...
         run: |
           mkdir -p data
           date >> data/time.txt
