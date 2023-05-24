@@ -16,7 +16,7 @@ jobs:
         id: cache2
         with:
           path: data/
-          key: abc-def
+          key: abc
           # ${{ github.ref }}
           #fail-on-cache-miss: False
 
