@@ -17,6 +17,7 @@ jobs:
         with:
           path: data/
           key: ${{ github.ref }}
+          fail-on-cache-miss: False
 
 
       - name: Shell - View environment
