@@ -1,0 +1,32 @@
+name: Save and Restore
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/cache/restore@v3
+        id: cache
+        with:
+          path: data/
+          key: ${{ github.branch }}
+
+
+      - name: Shell - View environment
+        run: |
+          date >> data/time.txt
+          cat data/time.txt
+
+      - uses: actions/cache/save@v3
+        id: cache
+        with:
+          path: data/
+          key: ${{ github.branch }}
+
