@@ -20,10 +20,10 @@ jobs:
           #fail-on-cache-miss: False
 
 
-      #- name: Shell - View environment
-      #  run: |
-      #    date >> data/time.txt
-      #    cat data/time.txt
+      - name: Shell - View environment
+        run: |
+          date >> data/time.txt
+          cat data/time.txt
 
       #- uses: actions/cache/save@v3
       #  id: save
