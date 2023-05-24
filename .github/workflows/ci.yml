@@ -13,22 +13,22 @@ jobs:
       - uses: actions/checkout@v3
 
       - uses: actions/cache/restore@v3
-        id: restore
+        id: cache
         with:
           path: data/
-          key: abc
+          key: abc-def
           # ${{ github.ref }}
           #fail-on-cache-miss: False
 
 
-      - name: Shell - View environment
-        run: |
-          date >> data/time.txt
-          cat data/time.txt
+      #- name: Shell - View environment
+      #  run: |
+      #    date >> data/time.txt
+      #    cat data/time.txt
 
-      - uses: actions/cache/save@v3
-        id: save
-        with:
-          path: data/
-          key: abc
+      #- uses: actions/cache/save@v3
+      #  id: save
+      #  with:
+      #    path: data/
+      #    key: abc
 
