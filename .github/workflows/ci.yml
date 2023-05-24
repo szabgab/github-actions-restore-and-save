@@ -16,7 +16,7 @@ jobs:
         id: restore
         with:
           path: data/
-          key: ${{ github.branch }}
+          key: ${{ github.ref }}
 
 
       - name: Shell - View environment
@@ -28,5 +28,5 @@ jobs:
         id: save
         with:
           path: data/
-          key: ${{ github.branch }}
+          key: ${{ github.ref }}
 
