@@ -22,6 +22,7 @@ jobs:
 
       - name: Shell - View environment
         run: |
+          mkdir -p data
           date >> data/time.txt
           cat data/time.txt
 
