@@ -26,9 +26,9 @@ jobs:
           date >> data/time.txt
           cat data/time.txt
 
-      #- uses: actions/cache/save@v3
-      #  id: save
-      #  with:
-      #    path: data/
-      #    key: abc
+      - uses: actions/cache/save@v3
+        id: save
+        with:
+          path: data/
+          key: ${{ github.ref }}
 
