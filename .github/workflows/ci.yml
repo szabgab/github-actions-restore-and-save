@@ -16,8 +16,9 @@ jobs:
         id: restore
         with:
           path: data/
-          key: ${{ github.ref }}
-          fail-on-cache-miss: False
+          key: abc
+          # ${{ github.ref }}
+          #fail-on-cache-miss: False
 
 
       - name: Shell - View environment
@@ -29,5 +30,5 @@ jobs:
         id: save
         with:
           path: data/
-          key: ${{ github.ref }}
+          key: abc
 
