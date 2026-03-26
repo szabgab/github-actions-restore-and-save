@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Build
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
 
-      - uses: actions/cache/restore@v3
+      - uses: actions/cache/restore@v5
         id: restore
         with:
           path: data/
@@ -26,7 +26,7 @@ jobs:
           date >> data/time.txt
           cat data/time.txt
 
-      - uses: actions/cache/save@v3
+      - uses: actions/cache/save@v5
         id: save
         with:
           path: data/
